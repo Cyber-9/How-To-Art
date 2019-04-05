@@ -1,4 +1,62 @@
 /*instantInspo page*/
+/*about page*/
+/*This code is to make the click on the mouse to have a smooth transition.*/
+html {
+    scroll-behavior: smooth;
+} 
+/*This overflow is called to set what shows when content overflows. 
+The hidden is called on the property to set the visibity as hidden*/
+body {    
+    overflow-x: hidden; 
+}
+
+/*This affects every img in the lessons page*/
+img {               
+    width: 100%;    
+}
+/*This @media screen is so that if the web browser small enough, 
+then the arrows will disappear as it's not needed if the entire thing appears.*/
+@media screen and (max-width: 1000px) {
+    #visible_top {
+        display: none;
+    }
+    #visible_bottom {
+        display: none;
+    }
+}
+
+/*This id is called when visible top is clicked. The webpage goes to 0px as the position.*/ 
+#up {
+    position: absolute;
+    top: 0px;
+}
+
+/*This id creates the positioning and size of the top arrow */
+#visible_top {
+    z-index: 20;
+    position: absolute;
+    top: 30vw;
+    left: 45vw;
+    opacity: 1;
+    width: 10vw;
+}
+
+/*This id creates the positioning and size of the bottom arrow*/
+#visible_bottom {
+    z-index: 20;
+    position: absolute;
+    width: 10vw;    
+    top: 120vw;           
+    left: 45vw;
+    opacity: 1;
+}
+
+/*This id is called when visible_bottom is clicked. It gets to the 62.8vw position.*/
+#down {
+    position: absolute;
+    top: 40vw;
+}
+
 /*These(body-background) are called for the entire instantInspo page.*/
 
 /*This overflow is called to set what shows when content overflows. 
@@ -87,7 +145,7 @@ div:hover {
     width: 13.89vw;      
     top: 41.1vw;          
     left: 86vw;       
-    
+
 }
 
 /*rainbows on bottom edge of pic*/

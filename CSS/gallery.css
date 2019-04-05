@@ -1,9 +1,67 @@
 /*gallery page*/
+/*about page*/
+/*This code is to make the click on the mouse to have a smooth transition.*/
+html {
+    scroll-behavior: smooth;
+} 
+/*This overflow is called to set what shows when content overflows. 
+The hidden is called on the property to set the visibity as hidden*/
+body {    
+    overflow-x: hidden; 
+}
+
+/*This affects every img in the lessons page*/
+img {               
+    width: 100%;    
+}
+/*This @media screen is so that if the web browser small enough, 
+then the arrows will disappear as it's not needed if the entire thing appears.*/
+@media screen and (max-width: 1000px) {
+    #visible_top {
+        display: none;
+    }
+    #visible_bottom {
+        display: none;
+    }
+}
+
+/*This id is called when visible top is clicked. The webpage goes to 0px as the position.*/ 
+#up {
+    position: absolute;
+    top: 0px;
+}
+
+/*This id creates the positioning and size of the top arrow */
+#visible_top {
+    z-index: 20;
+    position: absolute;
+    top: 60vw;
+    left: 45vw;
+    opacity: 1;
+    width: 10vw;
+}
+
+/*This id creates the positioning and size of the bottom arrow*/
+#visible_bottom {
+    z-index: 20;
+    position: absolute;
+    width: 10vw;    
+    top: 105vw;           
+    left: 45vw;
+    opacity: 1;
+}
+
+/*This id is called when visible_bottom is clicked. It gets to the 62.8vw position.*/
+#down {
+    position: absolute;
+    top: 62.8vw;
+}
+
 /*These(body-background) are called for the entire gallery page.*/
 body {    
     overflow-x: hidden; 
     /*This overflow is called to set what shows when content overflows. 
-      The hidden is called on the property to set the visibity as hidden*/
+    The hidden is called on the property to set the visibity as hidden*/
 }
 
 img {               /*This affects every img in the gallery page*/
@@ -38,7 +96,7 @@ div:hover {
     left: -0.3vw;         
 }
 
- /*About navbar */
+/*About navbar */
 .about {               
     width: 18.9vw;      
     top: 1.2vw;         
@@ -52,14 +110,14 @@ div:hover {
     left: 45.8vw;        
 }
 
- /*InstantInspo navbar*/
+/*InstantInspo navbar*/
 .instantInspo {         
     width: 18.95vw;     
     top: .4vw;          
     left: 62.9vw;        
 }
 
- /*Gallery navbar for gallery page*/
+/*Gallery navbar for gallery page*/
 .gallery {            
     width: 19.98vw;   
     top: 0vw;          
@@ -139,7 +197,7 @@ div:hover {
     transition-duration: 1s;
 }
 
- /*3rd student's artwork image*/
+/*3rd student's artwork image*/
 .art3 {                
     width: 7.27vw;     
     top: 28.08vw;       
@@ -248,7 +306,7 @@ div:hover {
     transition-duration: 0.1s;
 }
 
- /*zoom in the city when it's clicked*/  
+/*zoom in the city when it's clicked*/  
 .art6:active + .city {       
     width: 40vw;             
     top: 25vw;               
@@ -259,7 +317,7 @@ div:hover {
     transition-duration: 1s;
 }
 
- /*7th student's artwork image*/
+/*7th student's artwork image*/
 .art7 {                
     width: 10.37vw;   
     top: 16.5vw;       
